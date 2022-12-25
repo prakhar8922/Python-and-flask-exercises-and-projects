@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Exercise 2</title>
+</head>
+
+<body>
+    <h1>Puppy Adoption Page</h1>
+    <h2>Please enter your information to adopt a puppy and we will email you back.</h2>
+    <p>Please Note:First Name,Last Name,Password,and Email are required</p>
+
+    <!-- Upon submitting the form will perform the action (a redirect) -->
+    <form action="https://flask.palletsprojects.com/en/2.2.x/" method="get">
+        <label for="first name">First Name:</label>
+        <input type="text" id="first name" placeholder="First Name">
+
+        <label for="last name">Last Name:</label>
+        <input type="text" id="last name" placeholder="Last Name">
+
+        <br>
+        <br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="name@email.com">
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="password">
+
+        <p>Are you over the age of 18?</p>
+        <label for="yes">Yes:</label>
+        <input type="radio" id="yes" name="age choice" value="Yes">
+        <!-- name =age choice connects both the radio labels and hence at a time only one box can be ticked -->
+
+
+        <label for="no">No:</label>
+        <input type="radio" id="no" name="age choice" value="No">
+
+        <p>Do you have a Credit Card or PayPal</p>
+        <select name="Credit Card">
+            <option value="Card">Credit Card</option>
+            <option value="pal">Paypal</option>
+        </select>
+        <br>
+        <br>
+        <input type="submit" value="Submit Feedback">
+
+    </form>
+
+</body>
+
+</html>
