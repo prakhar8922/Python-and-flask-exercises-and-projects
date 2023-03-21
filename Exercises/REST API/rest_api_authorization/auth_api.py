@@ -10,7 +10,10 @@ app.config['SECRET_KEY'] = 'mysecretkey'
 
 api = Api(app)
 
+# app: The Flask application instance to use for JWT authentication.
 jwt = JWT(app, authenticate, identity)
+# authenticate: A function that takes in a username and password and returns a user object if the credentials are valid. If the credentials are not valid, the function should return None.
+# identity: A function that takes in a payload (a dictionary containing information about the user) and returns a user object. This function is used to retrieve a user object from the database or other data source based on the user's ID.
 
 puppies = []
 

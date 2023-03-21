@@ -10,25 +10,26 @@ api = Api(app)
 puppies = []
 
 
+# define a resource for puppy names
 class PuppyNames(Resource):
+
+    # GET method to retrieve a specific puppy by name
     def get(self, name):
         for pup in puppies:
             if pup['name'] == name:
                 return pup
         return {'name': None}, 404
 
+    # POST method to add a new puppy to the list
     def post(self, name):
         pup = {'name': name}
         puppies.append(pup)
-
         return pup
 
+    # DELETE method to remove a specific puppy by name
     def delete(self, name):
-
-        # Cycle through list for puppies
         for ind, pup in enumerate(puppies):
             if pup['name'] == name:
-                # don't really need to save this
                 delted_pup = puppies.pop(ind)
                 return {'note': 'delete successful'}
 
